@@ -1,6 +1,4 @@
-﻿#if SYSTEM_DRAWING_SUPPORT
-
-using System;
+﻿using System;
 using System.Drawing;
 using System.Drawing.Imaging;
 using SD = System.Drawing;
@@ -165,5 +163,3 @@ namespace Tesseract
         }
     }
 }
-
-#endif

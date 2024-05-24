@@ -1,0 +1,188 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <DefineConstants>NETCORE;NETSTANDARD;NETSTANDARD2_0</DefineConstants>
+    <RootNamespace>Tesseract.Tests</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.2" />
+    <PackageReference Include="nunit" Version="3.13.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.3.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tesseract\Tesseract.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".\Data\Binarization\neo-32bit.png" Link="Data\Binarization\neo-32bit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\Binarization\neo-8bit-grayscale.png" Link="Data\Binarization\neo-8bit-grayscale.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\Binarization\neo-8bit.png" Link="Data\Binarization\neo-8bit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\Conversion\photo_grayscale_1bpp.tif" Link="Data\Conversion\photo_grayscale_1bpp.tif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\Conversion\photo_grayscale_4bpp.tif" Link="Data\Conversion\photo_grayscale_4bpp.tif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\Conversion\photo_palette_1bpp.tif" Link="Data\Conversion\photo_palette_1bpp.tif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\Conversion\photo_palette_4bpp.tif" Link="Data\Conversion\photo_palette_4bpp.tif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\Conversion\photo_palette_8bpp.png" Link="Data\Conversion\photo_palette_8bpp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\Conversion\photo_palette_8bpp.tif" Link="Data\Conversion\photo_palette_8bpp.tif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\Conversion\photo_argb_32bpp.tif" Link="Data\Conversion\photo_argb_32bpp.tif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\Conversion\photo_rgb_32bpp.tif" Link="Data\Conversion\photo_rgb_32bpp.tif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\Ocr\blank.tif" Link="Data\Ocr\blank.tif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\Ocr\empty.png" Link="Data\Ocr\empty.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\Ocr\Fonts.tif" Link="Data\Ocr\Fonts.tif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\Ocr\phototest.tif" Link="Data\Ocr\phototest.tif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\Ocr\PSM_SingleBlock.png" Link="Data\Ocr\PSM_SingleBlock.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\Ocr\PSM_SingleBlockVertText.png" Link="Data\Ocr\PSM_SingleBlockVertText.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\Ocr\PSM_SingleChar.png" Link="Data\Ocr\PSM_SingleChar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\Ocr\PSM_SingleColumn.png" Link="Data\Ocr\PSM_SingleColumn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\Ocr\PSM_SingleLine.png" Link="Data\Ocr\PSM_SingleLine.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\Ocr\PSM_SingleWord.png" Link="Data\Ocr\PSM_SingleWord.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\Ocr\uzn-test.png" Link="Data\Ocr\uzn-test.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\Ocr\uzn-test.uzn" Link="Data\Ocr\uzn-test.uzn">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\processing\dave-orig.png" Link="Data\processing\dave-orig.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\processing\multi-page.tif" Link="Data\processing\multi-page.tif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\processing\numbers.png" Link="Data\processing\numbers.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\processing\table.png" Link="Data\processing\table.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\processing\w91frag.jpg" Link="Data\processing\w91frag.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Data\Scew\scewed-phototest.png" Link="Data\Scew\scewed-phototest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Results\EngineTests\CanGenerateHOCROutput_False.txt" Link="Results\EngineTests\CanGenerateHOCROutput_False.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Results\EngineTests\CanGenerateHOCROutput_True.txt" Link="Results\EngineTests\CanGenerateHOCROutput_True.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Results\EngineTests\CanGenerateAltoOutput.txt" Link="Results\EngineTests\CanGenerateAltoOutput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Results\EngineTests\CanGenerateBoxOutput.txt" Link="Results\EngineTests\CanGenerateBoxOutput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Results\EngineTests\CanGenerateLSTMBoxOutput.txt" Link="Results\EngineTests\CanGenerateLSTMBoxOutput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Results\EngineTests\CanGenerateTsvOutput.txt" Link="Results\EngineTests\CanGenerateTsvOutput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Results\EngineTests\CanGenerateWordStrBoxOutput.txt" Link="Results\EngineTests\CanGenerateWordStrBoxOutput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Results\EngineTests\CanGenerateUNLVOutput.txt" Link="Results\EngineTests\CanGenerateUNLVOutput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Results\EngineTests\CanPrintVariables.txt" Link="Results\EngineTests\CanPrintVariables.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Results\EngineTests\CanProcessPixUsingResultIterator.txt" Link="Results\EngineTests\CanProcessPixUsingResultIterator.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\Results\EngineTests\CanProcessPixUsingResultIteratorAndChoiceIterator.txt" Link="Results\EngineTests\CanProcessPixUsingResultIteratorAndChoiceIterator.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\tessdata\Configs\bazzar" Link="tessdata\Configs\bazzar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\tessdata\eng.traineddata" Link="tessdata\eng.traineddata">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\tessdata\eng.user-patterns" Link="tessdata\eng.user-patterns">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\tessdata\eng.user-words" Link="tessdata\eng.user-words">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\tessdata\osd.traineddata" Link="tessdata\osd.traineddata">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".\tessdata\pdf.ttf" Link="tessdata\pdf.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tesseract\x64\leptonica-1.82.0.dll" Link="x64\leptonica-1.82.0.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tesseract\x64\tesseract50.dll" Link="x64\tesseract50.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tesseract\x86\leptonica-1.82.0.dll" Link="x86\leptonica-1.82.0.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Tesseract\x86\tesseract50.dll" Link="x86\tesseract50.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
+  </ItemGroup>
+  <Target Name="SymlinkLinuxDependencies" AfterTargets="AfterBuild" Condition=" '$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' ">
+    <Exec Command="ln -sf /usr/lib/x86_64-linux-gnu/liblept.so $(OutDir)x64/libleptonica-1.82.0.so" />
+    <Exec Command="ln -sf /usr/lib/x86_64-linux-gnu/libtesseract.so.4 $(OutDir)x64/libtesseract50.so" />
+  </Target>
+  <Target Name="SymlinkMacOSDependencies" AfterTargets="AfterBuild" Condition=" '$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::OSX)))' ">
+    <Exec Command="ln -sf /usr/local/lib/liblept.dylib $(OutDir)x64/libleptonica-1.82.0.dylib" />
+    <Exec Command="ln -sf /usr/local/lib/libtesseract.dylib $(OutDir)x64/libtesseract50.dylib" />
+  </Target>
+</Project>
